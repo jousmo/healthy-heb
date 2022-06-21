@@ -1,0 +1,16 @@
+{
+  "name": "healthy-heb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Healthy", "Rabbit", "Postgres", "Elastic"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.0",
+    "nodejs-health-checker": "^1.5.1"
+  }
+}
