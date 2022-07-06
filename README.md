@@ -8,6 +8,7 @@ Dependencies:
 
 * [nodejs-health-checker](https://www.npmjs.com/package/@cloudnative/health-connect)
 * [amqplib](https://www.npmjs.com/package/amqplib)
+* [pg](https://node-postgres.com/) Only connection postgres Custom Service
 
 ```
 npm install healthy-heb
@@ -20,7 +21,9 @@ npm install healthy-heb
 * Memcache
 * Web integration (https)
 * Aws Dynamo DB
-* Databases
+* Database (custom service con pg)
+  * postgres
+* Databases with sequelize
   * postgres 
   * mysql
   * sqlite
@@ -90,6 +93,19 @@ const options = {
         username: "rabbit",
         password: "rabbit",
         vhost: "rabbit"
+      })
+    },
+    {
+      type: HealthTypes.Custom,
+      name: "postgres",
+      host: "localhost",
+      customCheckerFunction: () => HealthTypePostgres({
+        user: 'dbuser',
+        host: 'database.server.com',
+        database: 'mydb',
+        password: 'secretpassword',
+        port: 3211,
+        ...more
       })
     },
     {
