@@ -6,11 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Healthy", "Rabbit", "Postgres", "Elastic"],
+  "keywords": [
+    "Healthy",
+    "Rabbit",
+    "Postgres",
+    "Elastic"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.10.0",
-    "nodejs-health-checker": "^1.5.1"
+    "nodejs-health-checker": "^1.5.1",
+    "pg": "^8.7.3"
   }
 }
