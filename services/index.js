@@ -1,7 +1,9 @@
-const HealthTypeRabbit = require('./rabbit')
-const HealthTypePostgres = require('./postgres')
+const webIntegration = require('./web.service')
+const postgresIntegration = require('./postgres.service')
+const rabbitIntegration = require('./rabbit.service')
 
 module.exports = {
-  HealthTypeRabbit,
-  HealthTypePostgres
+  webIntegration,
+  postgresIntegration,
+  rabbitIntegration
 }
