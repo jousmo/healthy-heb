@@ -8,6 +8,7 @@ async function postgresChecker(config) {
 
   return {
     name: `${HealthyTypes.Postgres} integration`,
+    alias: config.alias,
     status: result.status,
     duration: getDeltaTime(start),
     host: config.host,

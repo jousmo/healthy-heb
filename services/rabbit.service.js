@@ -1,6 +1,6 @@
 const amqp = require('amqplib');
 
-async function rabbitIntegration(config) {
+async function rabbitIntegration({ alias, ...config }) {
   try {
     const connection = await amqp.connect(config)
     const channel = await connection.createChannel()

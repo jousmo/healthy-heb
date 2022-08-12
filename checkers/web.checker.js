@@ -8,6 +8,7 @@ async function webChecker(config) {
 
   return {
     name: `${HealthyTypes.Web} integration`,
+    alias: config.alias,
     status: result.status,
     duration: getDeltaTime(start),
     host: config.host,

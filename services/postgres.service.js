@@ -1,6 +1,6 @@
 const { Client } = require('pg')
 
-async function postgresIntegration(config) {
+async function postgresIntegration({ alias, ...config }) {
   try {
     const client = new Client(config)
     await client.connect()

@@ -1,7 +1,7 @@
 const fetch = require('node-fetch')
 const { DefaultServices } = require('../types')
 
-async function webIntegration(config) {
+async function webIntegration({ alias, ...config }) {
   try {
     const controller = new AbortController();
     const timeout = config.timeout || DefaultServices.WebTimeout;

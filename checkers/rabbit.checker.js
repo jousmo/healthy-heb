@@ -8,6 +8,7 @@ async function rabbitChecker(config) {
 
   return {
     name: `${HealthyTypes.Rabbit} integration`,
+    alias: config.alias,
     status: result.status,
     duration: getDeltaTime(start),
     host: config.host,
