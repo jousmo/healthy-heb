@@ -11,7 +11,7 @@ async function rabbitChecker(config) {
     status: result.status,
     duration: getDeltaTime(start),
     host: config.host,
-    error: result?.error?.message
+    error: result?.error || result?.error?.message
   };
 }
 
