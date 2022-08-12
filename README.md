@@ -31,6 +31,7 @@ const options = {
   integrations: [
     {
       type: HealthyTypes.Rabbit,
+      alias: "My alias",
       host: 'localhost',
       protocol: 'amqp',
       hostname: 'localhost',
@@ -41,6 +42,7 @@ const options = {
     },
     {
       type: HealthyTypes.Postgres,
+      alias: "My alias",
       user: 'xx',
       host: 'localhost',
       database: 'xx',
@@ -49,6 +51,7 @@ const options = {
     },
     {
       type: HealthyTypes.Web,
+      alias: "My alias",
       host: "https://github.com/status",
       headers: [{ key: "Accept", value: "application/json" }]
     }
