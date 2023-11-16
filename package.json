@@ -1,6 +1,6 @@
 {
   "name": "healthy-heb",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Node Healthy",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,8 @@
   "author": "José Uscanga <jousmo@outlook.com>",
   "license": "ISC",
   "dependencies": {
-    "amqplib": "^0.10.2",
+    "amqplib": "^0.10.3",
     "node-fetch": "^2.6.7",
-    "pg": "^8.7.3"
+    "pg": "^8.11.3"
   }
 }
