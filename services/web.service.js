@@ -14,8 +14,9 @@ async function webIntegration({ alias, ...config }) {
     const { status } = await fetch(config.host, { signal: controller.signal , headers })
     clearTimeout(timeoutId);
     return {
-      status: status === 200,
-      error: status !== 200 ? { http_status: status } : undefined
+      status: (status >= 200 && status < 300) || (status >= 400 && status < 500),
+      httpStatus: status,
+      error: (status < 200 || status >= 300) && (status < 400 || status >= 500) ? { http_status: status } : undefined
     }
   } catch(error) {
     return {

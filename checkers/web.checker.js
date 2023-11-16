@@ -12,6 +12,7 @@ async function webChecker(config) {
     status: result.status,
     duration: getDeltaTime(start),
     host: config.host,
+    httpStatus: result?.httpStatus,
     error: result?.error || result?.error?.message
   };
 }
